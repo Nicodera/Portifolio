@@ -6,6 +6,8 @@
     <title>Portfólio de Nicolas</title>
     <!-- Adicionando fontes do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -96,6 +98,30 @@
             background-color: #333;
             color: #fff;
         }
+
+        /* Estilos para o link do WhatsApp */
+        .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .whatsapp-link i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .whatsapp-link:hover {
+            background-color: #128C7E;
+        }
     </style>
 </head>
 <body>
@@ -144,8 +170,13 @@
     <!-- Seção de Contato -->
     <section id="contato" class="section">
         <h2>Contato</h2>
-        <p>Você pode entrar em contato comigo por e-mail ou redes sociais:</p>
+        <p>Você pode entrar em contato comigo por e-mail ou pelo WhatsApp:</p>
         <p>Email: <a href="mailto:nicolas@exemplo.com">nicolas@exemplo.com</a></p>
+        
+        <!-- Link para o WhatsApp -->
+        <a href="https://api.whatsapp.com/send/?phone=559184994376&text&type=phone_number&app_absent=0" class="whatsapp-link" target="_blank">
+            <i class="fab fa-whatsapp"></i> Entre em contato pelo WhatsApp
+        </a>
     </section>
 
     <!-- Rodapé -->
