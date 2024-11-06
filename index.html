@@ -9,108 +9,144 @@
     <!-- Font Awesome para ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
+        /* Definição do fundo preto e ajustes de tipografia */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
         }
 
         header {
-            background-color: #333;
+            background-color: #111;
             color: #fff;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             margin: 0;
-            font-weight: 600; /* Poppins Bold */
+            font-weight: 600;
+            font-size: 3em;
+            letter-spacing: 2px;
+            color: #e0e0e0;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #aaa;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #444;
+            background-color: #222;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
-            color: white;
+            color: #bbb;
             padding: 15px 20px;
             text-decoration: none;
             text-transform: uppercase;
-            font-weight: 400; /* Poppins Regular */
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #1abc9c;
+            background-color: #e0e0e0;
+            color: #111;
         }
 
         .section {
-            padding: 40px;
-            max-width: 1000px;
-            margin: 20px auto;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #111;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         .section h2 {
-            color: #333;
+            color: #e0e0e0;
             text-align: center;
-            font-weight: 600; /* Poppins Bold */
+            font-weight: 600;
+            font-size: 2.5em;
+            margin-bottom: 40px;
         }
 
         .projects {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 30px;
             justify-content: center;
         }
 
         .project-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            background-color: #222;
+            border: 1px solid #333;
+            border-radius: 10px;
             padding: 20px;
-            width: 250px;
+            width: 280px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
         }
 
         .project-card img {
             width: 100%;
             height: auto;
             border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card img:hover {
+            transform: scale(1.1);
         }
 
         .project-card h3 {
-            color: #333;
-            font-size: 1.2em;
-            margin: 10px 0;
-            font-weight: 600; /* Poppins Bold */
+            color: #e0e0e0;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #333;
+            background-color: #111;
             color: #fff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Estilos para o link do WhatsApp */
-        .whatsapp-link, .instagram-link {
+        .social-links {
+            display: inline-flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .whatsapp-link, .instagram-link, .facebook-link {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 8px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            margin-top: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         .whatsapp-link {
@@ -119,6 +155,7 @@
 
         .whatsapp-link:hover {
             background-color: #128C7E;
+            transform: scale(1.1);
         }
 
         .instagram-link {
@@ -127,11 +164,21 @@
 
         .instagram-link:hover {
             background-color: #C13584;
+            transform: scale(1.1);
         }
 
-        .whatsapp-link i, .instagram-link i {
+        .facebook-link {
+            background-color: #1877F2;
+        }
+
+        .facebook-link:hover {
+            background-color: #165E9F;
+            transform: scale(1.1);
+        }
+
+        .whatsapp-link i, .instagram-link i, .facebook-link i {
             margin-right: 10px;
-            font-size: 18px;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -182,17 +229,25 @@
     <section id="contato" class="section">
         <h2>Contato</h2>
         <p>Você pode entrar em contato comigo por e-mail ou pelas redes sociais:</p>
-        <p>Email: <a href="mailto:nicolas@exemplo.com">nicolas@exemplo.com</a></p>
-        
-        <!-- Link para o WhatsApp -->
-        <a href="https://api.whatsapp.com/send/?phone=559184994376&text&type=phone_number&app_absent=0" class="whatsapp-link" target="_blank">
-            <i class="fab fa-whatsapp"></i> Entre em contato pelo WhatsApp
-        </a>
+        <p>Email: <a href="mailto:nicolas@exemplo.com" style="color: #e0e0e0;">nicolas@exemplo.com</a></p>
 
-        <!-- Link para o Instagram -->
-        <a href="https://www.instagram.com/nicodera/" class="instagram-link" target="_blank">
-            <i class="fab fa-instagram"></i> Entre em contato pelo Instagram
-        </a>
+        <!-- Links das redes sociais -->
+        <div class="social-links">
+            <!-- Link para o WhatsApp -->
+            <a href="https://api.whatsapp.com/send/?phone=559184994376&text&type=phone_number&app_absent=0" class="whatsapp-link" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+
+            <!-- Link para o Instagram -->
+            <a href="https://www.instagram.com/nicodera_/" class="instagram-link" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+
+            <!-- Link para o Facebook -->
+            <a href="https://www.facebook.com/nicoderadesigner" class="facebook-link" target="_blank">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+        </div>
     </section>
 
     <!-- Rodapé -->
